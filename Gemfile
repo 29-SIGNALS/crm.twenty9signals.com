@@ -13,6 +13,7 @@ gem 'pony'
 gem 'bcrypt'
 gem "tux"
 gem "mysql2"
+gem "faker", "~> 2.16"
 
 
 
@@ -24,3 +25,5 @@ group :development, :test do
   gem 'rack-test'
   gem 'database_cleaner', git: 'https://github.com/bmabey/database_cleaner.git'
 end
+
+

@@ -1,3 +1,4 @@
+require 'faker'
 puts "Running DB seed..."
 
 # Don't let seed duplicate data more than once
@@ -43,4 +44,15 @@ User.create([
     }
             ])
 puts "Users Completed..."
-puts "Adding Listings ..."
+puts "......."
+puts "Cleaning Listings Table"
+listings.destroy_all
+puts "......."
+puts "Adding Listings to Users"
+4.times do
+  Listing.create({
+                "name" => Faker::Name.name,
+
+              })
+  end
+
