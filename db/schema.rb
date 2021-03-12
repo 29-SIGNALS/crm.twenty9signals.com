@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_24_162628) do
+ActiveRecord::Schema.define(version: 3) do
 
   create_table "listings", charset: "utf8", force: :cascade do |t|
     t.string "name"
@@ -26,11 +26,11 @@ ActiveRecord::Schema.define(version: 2020_12_24_162628) do
     t.string "photo_2"
     t.string "photo_3"
     t.string "photo_4"
-    t.integer "user_id"
     t.string "phone"
     t.string "community"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
   end
 
   create_table "users", charset: "utf8", force: :cascade do |t|
@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 2020_12_24_162628) do
     t.string "email"
     t.string "username"
     t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
