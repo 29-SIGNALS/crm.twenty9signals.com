@@ -1,0 +1,18 @@
+<h1>Edit HOA</h1>
+<section id="page">
+  <form class="form" action="/hoas/<%= @hoa.id %>" method="post">
+    <input type="hidden" name="_method" value="patch">
+    <label for="hoa_name" class="label-name">Role Name</label>
+    <input type="text" id="hoa_name" name="hoa[hoa_name]" value="<%= @hoa.name %>" />
+
+    <input type="submit" value="Update Role" class="button" />
+  </form>
+
+  <nav>
+    <ol>
+      <li><a href="/hoa/new">Roles Home</a></li>
+      <li><a href="/hoa/new">New</a></li>
+
+    </ol>
+  </nav>
+</section>

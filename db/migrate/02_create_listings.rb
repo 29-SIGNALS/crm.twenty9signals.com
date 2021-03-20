@@ -1,8 +1,8 @@
 class CreateListings < ActiveRecord::Migration[6.1]
   def change
     create_table :listings do |t|
-      t.string :name
-      t.string :tag_name
+      t.string :address
+      t.integer :hoa_id
       t.string :status
       t.date :first_listed
       t.string :bedrooms
@@ -14,8 +14,7 @@ class CreateListings < ActiveRecord::Migration[6.1]
       t.string :photo_2
       t.string :photo_3
       t.string :photo_4
-      t.string :phone
-      t.string :community
+
 
       t.timestamps null: false
     end

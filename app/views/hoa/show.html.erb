@@ -1,0 +1,45 @@
+<h1>Confirm HOA Changes?</h1>
+
+
+<section id="page">
+  <table class="table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>HOA Name</th>
+      <th>Created</th>
+      <th>Updated</th>
+      <th></th>
+      <th></th>
+
+    </tr>
+    </thead>
+
+    <tbody>
+
+      <tr>
+        <td><a href='/hoa/<%= @hoa.id %>/edit'><%= @hoa.id %></a></td>
+        <td><%= @hoa.name %></td>
+        <td><%= @hoa.created_at.to_s %></td>
+        <td><%= @hoa.updated_at.to_s %></td>
+        <td><form method="get" action="/hoa">
+          <input type="submit" value="Continue" class="button" />
+        </form></td>
+        <td>  <form method="post" action="/hoa/<%= @hoa.id %>">
+          <input type="hidden" name="_method" value="delete" />
+          <input type="submit" value="Delete" class="button" />
+        </form></td>
+
+      </tr>
+
+    </tbody>
+  </table>
+  <nav>
+    <ol>
+      <li><a href="/hoa">HOA Home</a></li>
+      <li><a href="/hoa/new">New</a></li>
+
+    </ol>
+  </nav>
+
+</section>

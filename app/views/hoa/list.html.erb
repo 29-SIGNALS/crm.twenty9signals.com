@@ -1,0 +1,32 @@
+<h1>Show All HOA</h1>
+<section id="page">
+<table class="table-striped">
+  <thead>
+  <tr>
+    <th>ID. </th>
+    <th>HOA Name</th>
+    <th>Created At</th>
+    <th>Updated</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @hoa.each do |hoa| %>
+    <tr>
+      <td><a href='/hoas/<%= hoa.id%>/edit'><%= hoa.id.to_s %></a></td>
+      <td><%= hoa.hoa_name %></td>
+      <td><%= hoa.created_at.to_s %></td>
+      <td><%= hoa.updated_at.to_s %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+  <nav>
+    <ol>
+      <li><a href="/hoa">HOA Home</a></li>
+      <li><a href="/hoa/show">View</a></li>
+      <li><a href="/hoa/new">New</a></li>
+
+    </ol>
+  </nav>
+</section>

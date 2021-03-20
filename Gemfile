@@ -27,3 +27,5 @@ group :development, :test do
 end
 
 
+
+gem "dotenv", "~> 2.7"
